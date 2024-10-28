@@ -8,6 +8,8 @@ namespace VerificationProvider.Models
 {
     internal class Class
     {
-        public string name ; public int age; public int id;
+        public string name { get; set; }
+
+        public string age { get; set; }
     }
 }
