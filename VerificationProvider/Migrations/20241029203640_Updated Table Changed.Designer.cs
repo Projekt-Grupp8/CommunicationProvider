@@ -12,8 +12,8 @@ using VerificationProvider.Data.Contexts;
 namespace VerificationProvider.Migrations
 {
     [DbContext(typeof(DatabaseContexts))]
-    [Migration("20241029123647_VerificationRequest Table Added")]
-    partial class VerificationRequestTableAdded
+    [Migration("20241029203640_Updated Table Changed")]
+    partial class UpdatedTableChanged
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
