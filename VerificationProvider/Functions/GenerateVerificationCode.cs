@@ -39,6 +39,8 @@ namespace VerificationProvider.Functions
                                 if (!string.IsNullOrEmpty(payLoad))
                                 {
                                     await messageActions.CompleteMessageAsync(message);
+                                    
+                                    _logger.LogInformation($"Message sent succesfully by:{VerificationRequest.Email}");
                                     return payLoad;
                                 }
                             }

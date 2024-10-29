@@ -26,7 +26,7 @@ public class VerificationService(IServiceProvider serviceProvider, ILogger<Verif
             if (existingRequest != null)
             {
                 existingRequest.Code = code;
-                existingRequest.ExpiryDate = DateTime.Now.AddMinutes(5);
+                existingRequest.ExpiryDate = DateTime.UtcNow.AddMinutes(5);
                 context.Entry(existingRequest).State = EntityState.Modified;
             }
             else
