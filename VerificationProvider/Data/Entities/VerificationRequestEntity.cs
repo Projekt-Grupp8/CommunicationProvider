@@ -10,5 +10,7 @@ namespace VerificationProvider.Data.Entities
         public string Code { get; set; } = null!;
 
         public DateTime ExpiryDate { get; set; } = DateTime.Now.AddMinutes(5);
+
+       
     }
 }
