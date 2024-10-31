@@ -1,4 +1,5 @@
 ﻿using Azure.Messaging.ServiceBus;
+using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using VerificationProvider.Models;
 
@@ -6,6 +7,13 @@ namespace VerificationProvider.Services
 {
     public class WelcomeService : IWelcomeService
     {
+        private readonly ILogger<WelcomeService> _logger;
+
+        public WelcomeService(ILogger<WelcomeService> logger)
+        {
+            _logger = logger;
+        }
+
         public EmailRequest GenerateWelcomeEmailRequest(string email, string name)
         {
             try
